@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Basic Web</title>
+    <title>LaraBlog</title>
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
@@ -16,10 +16,6 @@
           @include('inc.messages')
         @yield('content')
         </div>
-        <div class="col-md-8 col-lg-4">
-        @include('inc.sidebar')
-        </div>
-
       </div>
     </div>
     <footer id="footer" class="text-center">

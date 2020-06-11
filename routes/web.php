@@ -17,7 +17,7 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/create', function () {
+    return view('create');
 });
-Route::post('/contact/submit', 'MessagesController@submit');
+Route::post('/create/submit', 'MessagesController@submit');

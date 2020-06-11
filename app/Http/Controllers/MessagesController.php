@@ -8,8 +8,8 @@ class MessagesController extends Controller
 {
     public function submit(Request $request){
       $this->validate($request, [
-        'name' => 'required',
-        'email' => 'required'
+        'title' => 'required',
+        'detail' => 'required'
       ]);
       return 'success';
     }
