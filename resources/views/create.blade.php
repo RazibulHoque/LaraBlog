@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
 <h1>Create new post</h1>
 {!! Form::open(['url' => 'create/submit']) !!}
 <div class="form-group">
@@ -21,4 +22,6 @@
   {{Form::submit('Submit', ['class'=> 'btn btn-primary'])}}
 </div>
 {!! Form::close() !!}
+</div>
+@include('inc.postarea')
 @endsection

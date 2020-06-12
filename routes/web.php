@@ -20,6 +20,9 @@ Route::get('/about', function () {
 Route::get('/create', function () {
     return view('create');
 });
+Route::get('/contact',function(){
+    return view('contact');
+});
 Route::post('/create/submit', 'MessagesController@submit');
 
 Auth::routes();
