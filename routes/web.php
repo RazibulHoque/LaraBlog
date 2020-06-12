@@ -21,3 +21,15 @@ Route::get('/create', function () {
     return view('create');
 });
 Route::post('/create/submit', 'MessagesController@submit');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
