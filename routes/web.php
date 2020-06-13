@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 Route::get('/about', function () {
     return view('about');
@@ -24,6 +24,10 @@ Route::get('/contact',function(){
     return view('contact');
 });
 Route::post('/create/submit', 'MessagesController@submit');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

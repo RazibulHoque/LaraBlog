@@ -1,18 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-    <!--================ Banner and Blog slider start =================-->  
-    <section>
-      <div class="container">
-      @include('inc.banner')
-     @include('inc.blogslider')
-    @include('inc.messages')
-      </div>
-    </section>
-    <!--================ Banner Blog slider end =================-->  
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
 
-    <!--================ Start Blog Post Area =================-->
-    <section> 
-    @include('inc.postarea')
-    </section>
+                <div class="panel-body">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
