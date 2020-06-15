@@ -7,14 +7,14 @@
   <title>LaraBlog</title>
 	<link rel="icon" href="img/Fevicon.png" type="image/png">
 
-  <link rel="{{ asset('css/app.css') }}">
-  <link rel="stylesheet" href="fonts/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="fonts/themify-icons/themify-icons.css">
-  <link rel="stylesheet" href="fonts/linericon/style.css">
-  <link rel="stylesheet" href="fonts/owl-carousel/owl.theme.default.min.css">
-  <link rel="stylesheet" href="fonts/owl-carousel/owl.carousel.min.css">
- <link rel="stylesheet" href="css/style.css">
+  <link rel="{{ asset('/css/app.css') }}">
+  <link rel="stylesheet" href="/fonts/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/fonts/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="/fonts/linericon/style.css">
+  <link rel="stylesheet" href="/fonts/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="/fonts/owl-carousel/owl.carousel.min.css">
+ <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <!--================Header Menu Area =================-->
@@ -115,13 +115,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   </footer>
   <!--================ End Footer Area =================-->
 
-  <script src="{{ asset('js/app.js') }}"></script>
-  <script src="fonts/vendor/jquery/jquery-3.2.1.min.js"></script>
-  <script src="fonts/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="fonts/owl-carousel/owl.carousel.min.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/mail-script.js"></script>
-  <script src="js/main.js"></script>
+  <script src="{{ asset('/js/app.js') }}"></script>
+  <script src="/fonts/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/fonts/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="/fonts/owl-carousel/owl.carousel.min.js"></script>
+  <script src="/js/jquery.ajaxchimp.min.js"></script>
+  <script src="/js/mail-script.js"></script>
+  <script src="/js/main.js"></script>
   <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 <script>
 CKEDITOR.replace( 'summary-ckeditor' );

@@ -4,7 +4,7 @@
 @include('inc.messages')
 <div class="container">
 <h1>Create new post</h1>
-{!! Form::open(['url' => 'create/submit']) !!}
+{!! Form::open(['url' => 'profile/submit']) !!}
 <div class="form-group">
   {{Form::label('title', 'Title')}}
   {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Enter Title'])}}

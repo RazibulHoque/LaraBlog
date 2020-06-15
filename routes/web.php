@@ -17,13 +17,13 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/create', function () {
-    return view('create');
+Route::get('/post', function () {
+    return view('post');
 });
 Route::get('/contact',function(){
     return view('contact');
 });
-Route::post('/create/submit', 'MessagesController@submit');
+Route::post('/profile/submit', 'MessagesController@submit');
 
 Auth::routes();
 
@@ -31,7 +31,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 
 Auth::routes();
 

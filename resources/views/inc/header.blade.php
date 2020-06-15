@@ -19,10 +19,10 @@
                   <li class="nav-item"><a class="nav-link" href="/">Post</a>
               @else
                   <li class="nav-item submenu dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    <a href="/" class="nav-link dropdown-toggle" data-toggle="" role="button" aria-haspopup="true"
                       aria-expanded="false">Post</a>
                     <ul class="dropdown-menu">
-                      <li class="nav-item"><a class="nav-link" href="create">Create Post</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/post">Create Post</a></li>
                     </ul>
                   </li>  
                @endif       
@@ -34,8 +34,8 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('login') }}" >Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('register') }}" >Register</a></li>
                 @else
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <li class="nav-item submenu dropdown">
+                        <a class="nav-link" href="/" class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="true">
                             {{ Auth::user()->username }} <span class="caret"></span>
                         </a>
 
