@@ -4,25 +4,39 @@
 @include('inc.messages')
 <div class="container">
 <h1>Create new post</h1>
-{!! Form::open(['url' => 'profile/submit']) !!}
+<form action="/post" enctype="multipart/form-data" method="post">
+  @csrf
 <div class="form-group">
   {{Form::label('title', 'Title')}}
   {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Enter Title'])}}
 
 </div>
-<div class="form-group">
-  {{Form::file('image')}}
+<div class="form-group ">
+  <ul class="cat-list mt-20">
+  {{Form::label('category', 'Category')}}
+  <li>{{Form::radio('category', 'Technology', ['class' => 'form-control'])}}Technology</li>
+  <li>{{Form::radio('category', 'Software', ['class' => 'form-control'])}}Software<li>
+  <li>{{Form::radio('category', 'Lifestyle', ['class' => 'form-control'])}}Lifestyle<li>
+  <li>{{Form::radio('category', 'Shopping', ['class' => 'form-control'])}}Shopping</li>
+  <li>{{Form::radio('category', 'Food', ['class' => 'form-control'])}}Food</li>
+  <li>{{Form::radio('category', 'Other', ['class' => 'form-control'])}}Other</li>
+  </ul>
 
 </div>
 <div class="form-group">
-  {{Form::label('detail', 'Description')}}
-  {{Form::textarea('detail', '', ['class' => 'form-control', 'id' => 'summary-ckeditor', 'name' => 'summary-ckeditor'])}}
+  {{Form::label('image', 'Image')}}<br>
+  {{Form::file('image', ['id' => 'image', 'name' => 'image'])}}
+
+</div>
+<div class="form-group">
+  {{Form::label('description', 'Description')}}
+  {{Form::textarea('description', '', ['class' => 'form-control', 'id' => 'summary-ckeditor', 'name' => 'summary-ckeditor'])}}
 
 </div>
 <div>
   {{Form::submit('Submit', ['class'=> 'btn btn-primary'])}}
 </div>
-{!! Form::close() !!}
+</form>
 </div>
 @include('inc.postarea')
 @endsection

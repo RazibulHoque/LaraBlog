@@ -9,7 +9,8 @@ class MessagesController extends Controller
     public function submit(Request $request){
       $this->validate($request, [
         'title' => 'required',
-        'detail' => 'required'
+        'description' => 'required',
+
       ]);
       return 'success';
     }

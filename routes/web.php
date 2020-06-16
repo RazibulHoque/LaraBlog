@@ -17,9 +17,7 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/post', function () {
-    return view('post');
-});
+
 Route::get('/contact',function(){
     return view('contact');
 });
@@ -35,7 +33,8 @@ Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/post/create', 'PostsController@create');
+Route::post('/post', 'PostsController@store');
 
 Auth::routes();
 

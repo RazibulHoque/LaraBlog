@@ -158,6 +158,12 @@
                       <p>(10)</p>
                     </a>
                   </li>
+                  <li>
+                    <a href="#" class="d-flex justify-content-between">
+                      <p>Other</p>
+                      <p>(10)</p>
+                    </a>
+                  </li>
                 </ul>
               </div>
 
