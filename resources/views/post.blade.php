@@ -5,7 +5,6 @@
 <div class="container">
 <h1>Create new post</h1>
 <form action="/post" enctype="multipart/form-data" method="post">
-  @csrf
 <div class="form-group">
   {{Form::label('title', 'Title')}}
   {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Enter Title'])}}
