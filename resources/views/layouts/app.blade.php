@@ -124,7 +124,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="/js/main.js"></script>
   <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
   <script>
-  CKEDITOR.replace( 'summary-ckeditor' );
+  CKEDITOR.replace( 'description' );
   </script>
 </body>
 </html>

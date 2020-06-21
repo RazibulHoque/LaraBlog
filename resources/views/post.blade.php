@@ -5,6 +5,8 @@
 <div class="container">
 <h1>Create new post</h1>
 <form action="/post" enctype="multipart/form-data" method="post">
+  {{ csrf_field() }}
+
 <div class="form-group">
   {{Form::label('title', 'Title')}}
   {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Enter Title'])}}
@@ -29,7 +31,7 @@
 </div>
 <div class="form-group">
   {{Form::label('description', 'Description')}}
-  {{Form::textarea('description', '', ['class' => 'form-control', 'id' => 'summary-ckeditor', 'name' => 'summary-ckeditor'])}}
+  {{Form::textarea('description', '', ['class' => 'form-control', 'id' => 'description', 'name' => 'description'])}}
 
 </div>
 <div>
@@ -37,5 +39,4 @@
 </div>
 </form>
 </div>
-@include('inc.postarea')
 @endsection
