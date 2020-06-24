@@ -35,7 +35,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('register') }}" >Register</a></li>
                 @else
                     <li class="nav-item submenu dropdown">
-                        <a class="nav-link" href="/" class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="true">
+                    <a class="nav-link" href="/profile/{{ Auth::user()->id }}" class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="true">
                             {{ Auth::user()->username }} <span class="caret"></span>
                         </a>
 

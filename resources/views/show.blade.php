@@ -18,8 +18,8 @@
                   <div class="float-right mt-sm-0 mt-3">
                     <div class="media">
                       <div class="media-body">
-                        <h5>Mark wiens</h5>
-                        <p>12 Dec, 2017 11:21 am</p>
+                      <h5>{{ $post->user->username}}</h5>
+                      <p>{{ $post->updated_at }}</p>
                       </div>
                       <div class="d-flex">
                         <img width="42" height="42" src="img/blog/user-img.png" alt="">
@@ -28,7 +28,7 @@
                   </div>
                 </div>
            <blockquote class="blockquote">
-           <p class="mb-0">{{ $post->description}}</p>
+           <p class="mb-0">{!! $post->description !!}</p>
            </blockquote>
                <div class="news_d_footer flex-column flex-sm-row">
                  <a href="#"><span class="align-middle mr-2"><i class="ti-heart"></i></span>Lily and 4 people like this</a>
