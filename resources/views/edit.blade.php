@@ -21,7 +21,7 @@
                        type="text"
                        class="form-control "
                        name="title"
-                      
+                       value="{{ old('title') ?? $user->profile->title }}"
                        autocomplete="title" autofocus>
 
                 

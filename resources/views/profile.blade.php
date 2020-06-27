@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="/img/blog/blog-slider/blog-slide1.png" class="rounded-circle w-100">
+        <img src="/storage/{{ $user->profile->image }}" class="rounded-circle w-100">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
@@ -21,7 +21,7 @@
                 <div class="pr-5">followers</div>
                 <div class="pr-5">following</div>
             </div>
-            <div class="pt-4 font-weight-bold">{{ $user->name }}</div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
             <div>{{ $user->profile->about }}</div>
             <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
