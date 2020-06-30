@@ -23,7 +23,8 @@
                       <p>{{ $post->updated_at }}</p>
                       </div>
                       <div class="d-flex">
-                      <a href="/profile/{{ $post->user->id }}"><img width="42" height="42" src="/storage/{{ $post->user->profile->image }}" alt="">
+                      <a href="/profile/{{ $post->user->id }}"><img width="42" height="42" src="{{ $post->user->profile->profileImage() }}" alt="">
+                       <br> <a href="#" class="pl-3 btn">Subscribe</a>
                       </div>
                     </div>
                   </div>
