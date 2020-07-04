@@ -35,6 +35,8 @@ Route::get('/profile/{user}/edit', 'ProfilesController@edit')->middleware('auth'
 
 Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
 
+Route::post('/subscribe/{user}','SubscribeController@store');
+
 Auth::routes();
 
 Route::get('/post/create', 'PostsController@create');

@@ -115,7 +115,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   </footer>
   <!--================ End Footer Area =================-->
 
-  <script src="{{ asset('/js/app.js') }}"></script>
+  <script src="{{ asset('js/app.js') }}"></script>
   <script src="/fonts/vendor/jquery/jquery-3.2.1.min.js"></script>
   <script src="/fonts/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="/fonts/owl-carousel/owl.carousel.min.js"></script>

@@ -1,23 +1,46 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Example Component</div>
-
-                    <div class="panel-body">
-                        I'm an example component!
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div>
+        <button class="btn btn-primary ml-4" @click="subscribeUser" v-text="buttonText"></button>
+        
     </div>
 </template>
 
 <script>
     export default {
+        props: ['userId', 'subscribe'],
+        
+
         mounted() {
             console.log('Component mounted.')
+        },
+
+        data: function (){
+            return {
+                status: this.subscribe,
+            }
+        },
+
+        methods: {
+            subscribeUser(){
+                axios.post('/subscribe/' + this.userId)
+                .then(response => {
+
+                    this.status = ! this.status;
+
+                    console.log(response.data);
+                })
+                .catch(errors => {
+                    if (errors.response.status == 401){
+                        window.location = '/login';
+                    }
+                });
+            }
+        },
+
+        computed: {
+            buttonText(){
+                return (this.status) ? 'UnSubscribe' : 'Subscribe';
+            }
         }
     }
 </script>

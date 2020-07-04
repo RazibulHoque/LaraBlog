@@ -15,8 +15,9 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('subcribe-button', require('./components/SubcribeButton.vue'));
+Vue.component('subscribe-button', require('./components/SubscribeButton.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    
 });

@@ -10,7 +10,11 @@
             <div class="d-flex justify-content-between align-items-baseline">
                 <div class="d-flex pb-3">
                     <div class="h4">{{ $user->username }}</div>
-                    <button class="btn btn-primary ml-4">Subscribe</button>
+                    
+                    <div id="app" >
+                      
+                    <subscribe-button :user-id="{{ $user->id }}" subscribe="{{ $subscribe }}"> </subscribe-button>
+                    </div>
 
                 </div>
                 
@@ -19,8 +23,8 @@
             
             <div class="d-flex">
             <div class="pr-5"><strong>{{ $user->posts->count()}} Posts</strong></div>
-                <div class="pr-5">followers</div>
-                <div class="pr-5">following</div>
+            <div class="pr-5"><strong>{{ $user->profile->subscriber->count() }}</strong> Subscribers</div>
+            <div class="pr-5"><strong>{{ $user->subscribing->count() }}</strong> Subscriptions</div>
             </div>
             <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
             <div>{{ $user->profile->about }}</div>

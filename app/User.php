@@ -45,6 +45,11 @@ class User extends Authenticatable
 
     }
 
+    public function subscribing()
+    {
+        return $this->belongsToMany(Profile::class);
+    }
+
     public function profile()
     {
             return $this->hasOne(Profile::class);

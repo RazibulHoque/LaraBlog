@@ -10,7 +10,10 @@ class ProfilesController extends Controller
 {
     public function index(User $user)
     {
-        return view('profile', compact('user'));
+        $subscribe = (auth()->user()) ? auth()->user()->subscribing->contains($user->id) : false ;
+        
+
+        return view('profile', compact('user','subscribe'));
     }
 
     public function edit(User $user)
